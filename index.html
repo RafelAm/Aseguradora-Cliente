@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="name">Nombre:</label><br>
+        <input type="text" name="name" placeholder="Nombre" id="name"><br><br>
+        <label for="Apellidos">Apellidos:</label><br>
+        <input type="text" name="Apellidos" id="apll" placeholder="Apellidos"><br><br>
+        <label for="DNI">Documento Nacional de Identidad:</label><br>
+        <input type="text" name="DNI" id="dni" placeholder="00000000A"><br><br>
+        <label for="email">Correo electronico:</label><br>
+        <input type="text" name="email" id="email" placeholder="seguros@gmail.com"><br><br>
+
+        <label for="phone">Telefono:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+        <label for="postal">Codigo Postal:</label><br>
+        <input type="number" name="postal" id="postal"><br><br>
+        
+        <label for="carnet">Fecha Carnet de Conducir:</label><br>
+        <input type="date" name="carnet" id="carnet"><br><br>
+        <label for="matriculacion">Fecha de Matriculación:</label><br>
+        <input type="date" name="matriculacion" id="matriculacion"><br><br>
+        <label for="nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" name="nacimiento" id="nacimiento"><br><br>
+
+        <label for="Sexo">Sexo:</label><br>
+        <select name="Sexo" id="Sexo">
+            <option value="Masculino">Hombre</option>
+            <option value="Femenino">Mujer</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <label for="Comunidad">Comunidad Autonoma:</label><br>
+        <select name="comunidades" id="comunidades">
+            <option value="andalucia">Andalucía</option>
+            <option value="aragon">Aragón</option>
+            <option value="asturias">Asturias</option>
+            <option value="baleares">Islas Baleares</option>
+            <option value="canarias">Canarias</option>
+            <option value="cantabria">Cantabria</option>
+            <option value="castilla_la_mancha">Castilla-La Mancha</option>
+            <option value="castilla_y_leon">Castilla y León</option>
+            <option value="catalunya">Cataluña</option>
+            <option value="extremadura">Extremadura</option>
+            <option value="galicia">Galicia</option>
+            <option value="madrid">Comunidad de Madrid</option>
+            <option value="murcia">Región de Murcia</option>
+            <option value="navarra">Comunidad Foral de Navarra</option>
+            <option value="rioja">La Rioja</option>
+            <option value="pais_vasco">País Vasco</option>
+            <option value="valencia">Comunidad Valenciana</option>
+            <option value="ceuta">Ceuta</option>
+            <option value="melilla">Melilla</option>
+          </select><br><br>
+
+          <label for="Provincia">Provincia:</label><br>
+          <select name="comunidades" id="comunidades">
+            <optgroup label="Andalucía">
+              <option value="almeria">Almería</option>
+              <option value="cadiz">Cádiz</option>
+              <option value="cordoba">Córdoba</option>
+              <option value="granada">Granada</option>
+              <option value="huelva">Huelva</option>
+              <option value="jaen">Jaén</option>
+              <option value="malaga">Málaga</option>
+              <option value="sevilla">Sevilla</option>
+            </optgroup>
+            <optgroup label="Aragón">
+              <option value="huesca">Huesca</option>
+              <option value="teruel">Teruel</option>
+              <option value="zaragoza">Zaragoza</option>
+            </optgroup>
+            <optgroup label="Asturias">
+              <option value="asturias">Asturias</option>
+            </optgroup>
+            <optgroup label="Islas Baleares">
+              <option value="baleares">Islas Baleares</option>
+            </optgroup>
+            <optgroup label="Canarias">
+              <option value="las_palmas">Las Palmas</option>
+              <option value="santa_cruz_de_tenerife">Santa Cruz de Tenerife</option>
+            </optgroup>
+            <optgroup label="Cantabria">
+              <option value="cantabria">Cantabria</option>
+            </optgroup>
+            <optgroup label="Castilla-La Mancha">
+              <option value="albacete">Albacete</option>
+              <option value="ciudad_real">Ciudad Real</option>
+              <option value="cuenca">Cuenca</option>
+              <option value="guadalajara">Guadalajara</option>
+              <option value="toledo">Toledo</option>
+            </optgroup>
+            <optgroup label="Castilla y León">
+              <option value="avila">Ávila</option>
+              <option value="burgos">Burgos</option>
+              <option value="leon">León</option>
+              <option value="palencia">Palencia</option>
+              <option value="salamanca">Salamanca</option>
+              <option value="segovia">Segovia</option>
+              <option value="soria">Soria</option>
+              <option value="valladolid">Valladolid</option>
+              <option value="zamora">Zamora</option>
+            </optgroup>
+            <optgroup label="Cataluña">
+              <option value="barcelona">Barcelona</option>
+              <option value="girona">Girona</option>
+              <option value="lleida">Lleida</option>
+              <option value="tarragona">Tarragona</option>
+            </optgroup>
+            <optgroup label="Extremadura">
+              <option value="badajoz">Badajoz</option>
+              <option value="caceres">Cáceres</option>
+            </optgroup>
+            <optgroup label="Galicia">
+              <option value="a_coruna">A Coruña</option>
+              <option value="lugo">Lugo</option>
+              <option value="ourense">Ourense</option>
+              <option value="pontevedra">Pontevedra</option>
+            </optgroup>
+            <optgroup label="Comunidad de Madrid">
+              <option value="madrid">Madrid</option>
+            </optgroup>
+            <optgroup label="Región de Murcia">
+              <option value="murcia">Murcia</option>
+            </optgroup>
+            <optgroup label="Comunidad Foral de Navarra">
+              <option value="navarra">Navarra</option>
+            </optgroup>
+            <optgroup label="La Rioja">
+              <option value="la_rioja">La Rioja</option>
+            </optgroup>
+            <optgroup label="País Vasco">
+              <option value="alava">Álava</option>
+              <option value="guipuzcoa">Guipúzcoa</option>
+              <option value="vizcaya">Vizcaya</option>
+            </optgroup>
+            <optgroup label="Comunidad Valenciana">
+              <option value="alicante">Alicante</option>
+              <option value="castellon">Castellón</option>
+              <option value="valencia">Valencia</option>
+            </optgroup>
+            <optgroup label="Ceuta">
+              <option value="ceuta">Ceuta</option>
+            </optgroup>
+            <optgroup label="Melilla">
+              <option value="melilla">Melilla</option>
+            </optgroup>
+          </select><br><br>
+          
+          <label for="Marca">Marca:</label><br>
+          <select name="Marca" id="Marca">
+            <option value="audi">Audi</option>
+            <option value="bmw">BMW</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="citroen">Citroën</option>
+            <option value="fiat">Fiat</option>
+            <option value="ford">Ford</option>
+            <option value="honda">Honda</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="jaguar">Jaguar</option>
+            <option value="jeep">Jeep</option>
+            <option value="kia">Kia</option>
+            <option value="land_rover">Land Rover</option>
+            <option value="lexus">Lexus</option>
+            <option value="mazda">Mazda</option>
+            <option value="mercedes_benz">Mercedes-Benz</option>
+            <option value="mitsubishi">Mitsubishi</option>
+            <option value="nissan">Nissan</option>
+            <option value="peugeot">Peugeot</option>
+            <option value="renault">Renault</option>
+            <option value="seat">SEAT</option>
+            <option value="skoda">Škoda</option>
+            <option value="subaru">Subaru</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="tesla">Tesla</option>
+            <option value="toyota">Toyota</option>
+            <option value="volkswagen">Volkswagen</option>
+            <option value="volvo">Volvo</option>
+          </select><br><br>
+
+          <label for="Modelo"></label>
+          <select name="Modelo" id="Modelo">
+            <optgroup label="Audi">
+              <option value="a3">A3</option>
+              <option value="a4">A4</option>
+              <option value="a6">A6</option>
+              <option value="q5">Q5</option>
+              <option value="q7">Q7</option>
+            </optgroup>
+            <optgroup label="BMW">
+              <option value="serie_1">Serie 1</option>
+              <option value="serie_3">Serie 3</option>
+              <option value="serie_5">Serie 5</option>
+              <option value="x3">X3</option>
+              <option value="x5">X5</option>
+            </optgroup>
+            <optgroup label="Chevrolet">
+              <option value="spark">Spark</option>
+              <option value="malibu">Malibu</option>
+              <option value="camaro">Camaro</option>
+              <option value="equinox">Equinox</option>
+              <option value="traverse">Traverse</option>
+            </optgroup>
+            <optgroup label="Citroën">
+              <option value="c1">C1</option>
+              <option value="c3">C3</option>
+              <option value="c4">C4</option>
+              <option value="c5">C5</option>
+              <option value="berlingo">Berlingo</option>
+            </optgroup>
+            <optgroup label="Fiat">
+              <option value="500">500</option>
+              <option value="panda">Panda</option>
+              <option value="tipo">Tipo</option>
+              <option value="punto">Punto</option>
+              <option value="doblo">Doblò</option>
+            </optgroup>
+            <optgroup label="Ford">
+              <option value="fiesta">Fiesta</option>
+              <option value="focus">Focus</option>
+              <option value="mustang">Mustang</option>
+              <option value="escape">Escape</option>
+              <option value="explorer">Explorer</option>
+            </optgroup>
+            <optgroup label="Honda">
+              <option value="civic">Civic</option>
+              <option value="accord">Accord</option>
+              <option value="crv">CR-V</option>
+              <option value="hrv">HR-V</option>
+              <option value="jazz">Jazz</option>
+            </optgroup>
+            <optgroup label="Hyundai">
+              <option value="i10">i10</option>
+              <option value="i20">i20</option>
+              <option value="i30">i30</option>
+              <option value="kona">Kona</option>
+              <option value="tucson">Tucson</option>
+            </optgroup>
+            <optgroup label="Jaguar">
+              <option value="xe">XE</option>
+              <option value="xf">XF</option>
+              <option value="xj">XJ</option>
+              <option value="fpace">F-Pace</option>
+              <option value="etype">E-Type</option>
+            </optgroup>
+            <optgroup label="Jeep">
+              <option value="renegade">Renegade</option>
+              <option value="compass">Compass</option>
+              <option value="cherokee">Cherokee</option>
+              <option value="wrangler">Wrangler</option>
+              <option value="gladiator">Gladiator</option>
+            </optgroup>
+            <optgroup label="Kia">
+              <option value="picanto">Picanto</option>
+              <option value="rio">Rio</option>
+              <option value="ceed">Ceed</option>
+              <option value="sportage">Sportage</option>
+              <option value="sorento">Sorento</option>
+            </optgroup>
+            <optgroup label="Land Rover">
+              <option value="defender">Defender</option>
+              <option value="discovery">Discovery</option>
+              <option value="rangerover">Range Rover</option>
+              <option value="evoque">Evoque</option>
+              <option value="velar">Velar</option>
+            </optgroup>
+            <optgroup label="Lexus">
+              <option value="is">IS</option>
+              <option value="es">ES</option>
+              <option value="gs">GS</option>
+              <option value="rx">RX</option>
+              <option value="nx">NX</option>
+            </optgroup>
+            <optgroup label="Mazda">
+              <option value="mazda2">Mazda2</option>
+              <option value="mazda3">Mazda3</option>
+              <option value="mazda6">Mazda6</option>
+              <option value="cx3">CX-3</option>
+              <option value="cx5">CX-5</option>
+            </optgroup>
+            <optgroup label="Mercedes-Benz">
+              <option value="aclass">A-Class</option>
+              <option value="cclass">C-Class</option>
+              <option value="eclass">E-Class</option>
+              <option value="sclass">S-Class</option>
+              <option value="gle">GLE</option>
+            </optgroup>
+            <optgroup label="Mitsubishi">
+              <option value="mirage">Mirage</option>
+              <option value="lancer">Lancer</option>
+              <option value="outlander">Outlander</option>
+              <option value="pajero">Pajero</option>
+              <option value="eclipse">Eclipse</option>
+            </optgroup>
+            <optgroup label="Nissan">
+              <option value="micra">Micra</option>
+              <option value="juke">Juke</option>
+              <option value="qashqai">Qashqai</option>
+              <option value="xtrail">X-Trail</option>
+              <option value="leaf">Leaf</option>
+            </optgroup>
+            <optgroup label="Peugeot">
+              <option value="208">208</option>
+              <option value="308">308</option>
+              <option value="508">508</option>
+              <option value="2008">2008</option>
+              <option value="3008">3008</option>
+            </optgroup>
+            <optgroup label="Renault">
+              <option value="clio">Clio</option>
+              <option value="megane">Mégane</option>
+              <option value="scenic">Scénic</option>
+              <option value="kadjar">Kadjar</option>
+              <option value="zoe">Zoe</option>
+            </optgroup>
+            <optgroup label="SEAT">
+              <option value="ibiza">Ibiza</option>
+              <option value="leon">León</option>
+              <option value="ateca">Ateca</option>
+              <option value="arona">Arona</option>
+              <option value="tarraco">Tarraco</option>
+            </optgroup>
+            <optgroup label="Škoda">
+              <option value="fabia">Fabia</option>
+              <option value="octavia">Octavia</option>
+              <option value="superb">Superb</option>
+              <option value="karoq">Karoq</option>
+              <option value="kodiaq">Kodiaq</option>
+            </optgroup>
+            <optgroup label="Subaru">
+              <option value="impreza">Impreza</option>
+              <option value="legacy">Legacy</option>
+              <option value="outback">Outback</option>
+              <option value="forester">Forester</option>
+              <option value="ascent">Ascent</option>
+            </optgroup>
+            <optgroup label="Suzuki">
+              <option value="swift">Swift</option>
+              <option value="baleno">Baleno</option>
+              <option value="vitara">Vitara</option>
+              <option value="jimny">Jimny</option>
+              <option value="sx4">SX4</option>
+            </optgroup>
+            <optgroup label="Tesla">
+              <option value="model_s">Model S</option>
+              <option value="model_3">Model 3</option>
+              <option value="model_x">Model X</option>
+              <option value="model_y">Model Y</option>
+              <option value="cybertruck">Cybertruck</option>
+            </optgroup>
+            <optgroup label="Toyota">
+              <option value="corolla">Corolla</option>
+              <option value="camry">Camry</option>
+              <option value="rav4">RAV4</option>
+              <option value="highlander">Highlander</option>
+              <option value="prius">Prius</option>
+            </optgroup>
+            <optgroup label="Volkswagen">
+              <option value="golf">Golf</option>
+              <option value="polo">Polo</option>
+            </optgroup>
+          </select><br><br>
+
+        <label for="Seguro">Tipo de Seguro</label><br>
+        <select name="Seguro" id="Seguro">
+            <option value="Terceros">Terceros</option>
+            <option value="Terceros-2">Terceros Ampliado</option>
+            <option value="Franquicia">Franquiciado</option>
+            <option value="TodoRiesgo">Todo Riesgo</option>
+        </select><br><br>
+
+        <label for="Combustible">Tipo de Vehiculo:</label><br>
+        <select name="Combustible" id="Combustible">
+            <option value="Diesel">Diesel</option>
+            <option value="Gasolina">Gasolina</option>
+            <option value="Hibrido">Hibrido</option>
+            <option value="Electrico">Electrico</option>
+        </select><br><br>
+
+
+        <label for="Foto">Fotografia del DNI</label><br>
+        <input type="file" name="Foto" id="foto"><br><br>
+
+        <input type="checkbox" name="terminos" id="terminos" value="Acepto" required>
+        <label for="terminos">Acepto los Terminos y condiciones</label>
+        
+    </form>
+</body>
+</html>

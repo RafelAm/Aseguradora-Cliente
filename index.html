@@ -6,37 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="" method="post" id="formulario">
+
+      
         <label for="name">Nombre:</label><br>
-        <input type="text" name="name" placeholder="Nombre" id="name"><br><br>
+        <input type="text" name="name" placeholder="Nombre" id="name" ><br><br>
         <label for="Apellidos">Apellidos:</label><br>
         <input type="text" name="Apellidos" id="apll" placeholder="Apellidos"><br><br>
         <label for="DNI">Documento Nacional de Identidad:</label><br>
-        <input type="text" name="DNI" id="dni" placeholder="00000000A"><br><br>
+        <input type="text" name="DNI" id="dni" placeholder="00000000A" ><br><br>
         <label for="email">Correo electronico:</label><br>
-        <input type="text" name="email" id="email" placeholder="seguros@gmail.com"><br><br>
+        <input type="text" name="email" id="email" placeholder="seguros@gmail.com" ><br><br>
 
         <label for="phone">Telefono:</label><br>
-        <input type="tel" id="phone" name="phone"><br><br>
+        <input type="tel" id="phone" name="phone" ><br><br>
         <label for="postal">Codigo Postal:</label><br>
-        <input type="number" name="postal" id="postal"><br><br>
+        <input type="number" name="postal" id="postal" ><br><br>
         
         <label for="carnet">Fecha Carnet de Conducir:</label><br>
-        <input type="date" name="carnet" id="carnet"><br><br>
+        <input type="date" name="carnet" id="carnet" ><br><br>
         <label for="matriculacion">Fecha de Matriculación:</label><br>
-        <input type="date" name="matriculacion" id="matriculacion"><br><br>
+        <input type="date" name="matriculacion" id="matriculacion" ><br><br>
         <label for="nacimiento">Fecha de Nacimiento:</label><br>
-        <input type="date" name="nacimiento" id="nacimiento"><br><br>
+        <input type="date" name="nacimiento" id="nacimiento" ><br><br>
 
         <label for="Sexo">Sexo:</label><br>
-        <select name="Sexo" id="Sexo">
+        <select name="Sexo" id="Sexo" >
+            <option value="">--Seleccionar una opción--</option>
             <option value="Masculino">Hombre</option>
             <option value="Femenino">Mujer</option>
             <option value="Otro">Otro</option>
         </select><br><br>
 
         <label for="Comunidad">Comunidad Autonoma:</label><br>
-        <select name="comunidades" id="comunidades">
+        <select name="comunidades" id="comunidades" >
+          <option value="">--Seleccionar una opción--</option>
             <option value="andalucia">Andalucía</option>
             <option value="aragon">Aragón</option>
             <option value="asturias">Asturias</option>
@@ -59,7 +63,8 @@
           </select><br><br>
 
           <label for="Provincia">Provincia:</label><br>
-          <select name="comunidades" id="comunidades">
+          <select name="provincias" id="provincias" >
+            <option value="">--Seleccionar una opción--</option>
             <optgroup label="Andalucía">
               <option value="almeria">Almería</option>
               <option value="cadiz">Cádiz</option>
@@ -153,7 +158,8 @@
           </select><br><br>
           
           <label for="Marca">Marca:</label><br>
-          <select name="Marca" id="Marca">
+          <select name="Marca" id="Marca" >
+            <option value="">--Seleccionar una opción--</option>
             <option value="audi">Audi</option>
             <option value="bmw">BMW</option>
             <option value="chevrolet">Chevrolet</option>
@@ -185,6 +191,7 @@
 
           <label for="Modelo"></label>
           <select name="Modelo" id="Modelo">
+            <option value="">--Seleccionar una opción--</option>
             <optgroup label="Audi">
               <option value="a3">A3</option>
               <option value="a4">A4</option>
@@ -367,7 +374,8 @@
           </select><br><br>
 
         <label for="Seguro">Tipo de Seguro</label><br>
-        <select name="Seguro" id="Seguro">
+        <select name="Seguro" id="Seguro" >
+          <option value="">--Seleccionar una opción--</option>
             <option value="Terceros">Terceros</option>
             <option value="Terceros-2">Terceros Ampliado</option>
             <option value="Franquicia">Franquiciado</option>
@@ -375,7 +383,8 @@
         </select><br><br>
 
         <label for="Combustible">Tipo de Vehiculo:</label><br>
-        <select name="Combustible" id="Combustible">
+        <select name="Combustible" id="Combustible" >
+          <option value="">--Seleccionar una opción--</option>
             <option value="Diesel">Diesel</option>
             <option value="Gasolina">Gasolina</option>
             <option value="Hibrido">Hibrido</option>
@@ -386,9 +395,15 @@
         <label for="Foto">Fotografia del DNI</label><br>
         <input type="file" name="Foto" id="foto"><br><br>
 
-        <input type="checkbox" name="terminos" id="terminos" value="Acepto" required>
-        <label for="terminos">Acepto los Terminos y condiciones</label>
+        <input type="checkbox" name="terminos" id="terminos" value="Acepto" >
+        <label for="terminos">Acepto los Terminos y condiciones</label><br><br>
         
+
+        <button type="submit" id="sub">Calcular</button>
     </form>
+
+
+
+    <script src="logica.js"></script>
 </body>
 </html>

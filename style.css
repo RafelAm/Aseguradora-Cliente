@@ -1,12 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body form {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
   background-color: rgb(194, 194, 194);
   width: 70%;
 }
 body form div {
-  margin: 0 1%;
+  margin: 1% 1%;
 }
 body form .div1 {
   width: 31.5%;
@@ -35,8 +42,33 @@ body form .div5 {
   width: 100%;
   margin-top: 2%;
   text-align: center;
+  padding: 0 0 2% 0;
 }
 body form .div5 button {
   margin-top: 1%;
-  width: 50%;
+  width: 30%;
+  height: 3vh;
+  border: 0;
+}
+body .cards {
+  margin: 1% 0 0 0;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body .cards .carta {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20vh;
+  background-color: rgb(96, 96, 96);
+}
+body .cards .carta h3 {
+  color: #e85e01;
+  font-weight: bolder;
+}
+body .cards .carta h4 {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

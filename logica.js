@@ -599,24 +599,35 @@
     }
     }
 
+    const cartas = document.getElementById("cards");
+    let indice = 0;
     function loadSeguros() {
+
+    if(indice < 4){    
     for (let i = 0; i < 4; i++) {
-        let div = document.createElement("div");
+        indice++;
+        let div = document.createElement("div")
         let h3 = document.createElement("h3");
-        let precio = document.createElement("h3");
+        let precio = document.createElement("h4");
 
         precio.id = i;
-        precio.textContent = "Precio: " + precios[i];
+        precio.textContent = "Precio: " + precios[i] + " €";
 
-        h3.textContent = "Seguro: " + tiposSeguro[i];
+        h3.textContent = tiposSeguro[i];
         h3.id = i;
 
         div.id = i;
-        div.style.width = "250px";
-        div.style.background = "gray";
+        div.className = "carta";
+
 
         div.appendChild(h3);
         div.appendChild(precio);
-        document.body.appendChild(div);
+        cartas.appendChild(div);
+    }}else{
+        for(let i = 0; i < 4 ; i++){
+            document.getElementById(i).remove();
+            indice--;
+        }
     }
+
     }

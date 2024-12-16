@@ -507,11 +507,12 @@
 
     function loadModelos() {
     modelo.innerHTML = "";
+    document.getElementById("ModeloID").style.display= "none";
     let valCom;
     if (marcas.value >= 0) {
         valCom = marcas.value;
         modelo.style.display = "";
-
+        document.getElementById("ModeloID").style.display= "";
         for (let i = 1; i < marcasYModelos[valCom].length; i++) {
         const option = document.createElement("option");
         option.value = marcasYModelos[valCom][i].toLowerCase().replace(/ /g, "_");
@@ -601,6 +602,10 @@
 
     const cartas = document.getElementById("cards");
     let indice = 0;
+
+    let segValue=["Terceros","Terceros-2","Franquicia","TodoRiesgo"];
+
+
     function loadSeguros() {
 
     if(indice < 4){    
@@ -609,6 +614,28 @@
         let div = document.createElement("div")
         let h3 = document.createElement("h3");
         let precio = document.createElement("h4");
+        let accept = document.createElement("button");
+        let deny = document.createElement("button");
+        accept.id = i;
+        accept.textContent = "Contratar";
+        accept.addEventListener("click",()=>{
+            alert("Gracias por contratar. Atentamente tu asesor de seguros Rafel Amengual Tomás");
+        })
+
+        deny.id = i;
+        deny.value = i;
+        deny.textContent = "Borrar";
+        deny.addEventListener("click",()=>{
+            div.remove();
+
+        });
+
+
+        if(seguro.value == segValue[i]){
+            div.className = "carta-S";
+        }else{
+            div.className= "carta";
+        }
 
         precio.id = i;
         precio.textContent = "Precio: " + precios[i] + " €";
@@ -617,11 +644,10 @@
         h3.id = i;
 
         div.id = i;
-        div.className = "carta";
-
-
         div.appendChild(h3);
         div.appendChild(precio);
+        div.appendChild(accept);
+        div.appendChild(deny);
         cartas.appendChild(div);
     }}else{
         for(let i = 0; i < 4 ; i++){

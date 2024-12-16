@@ -3,91 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <form action="" method="post" id="formulario">
 
-      
-        <label for="name">Nombre:</label><br>
-        <input type="text" name="name" placeholder="Nombre" id="name" ><br><br>
-        <label for="Apellidos">Apellidos:</label><br>
-        <input type="text" name="Apellidos" id="apll" placeholder="Apellidos"><br><br>
-        <label for="DNI">Documento Nacional de Identidad:</label><br>
-        <input type="text" name="DNI" id="dni" placeholder="00000000A" ><br><br>
-        <label for="email">Correo electronico:</label><br>
-        <input type="text" name="email" id="email" placeholder="seguros@gmail.com" ><br><br>
-
-        <label for="phone">Telefono:</label><br>
-        <input type="tel" id="phone" name="phone" ><br><br>
-        <label for="postal">Codigo Postal:</label><br>
-        <input type="number" name="postal" id="postal" ><br><br>
+        <div class="div1">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" placeholder="Nombre" id="name" >
+        <label for="Apellidos">Apellidos:</label>
+        <input type="text" name="Apellidos" id="apll" placeholder="Apellidos">
+        <label for="DNI">Documento Nacional de Identidad:</label>
+        <input type="text" name="DNI" id="dni" placeholder="00000000A">
+        <label for="email">Correo electronico:</label>
+        <input type="text" name="email" id="email" placeholder="seguros@gmail.com">
+      </div>
+      <div class="div2">
+        <label for="phone">Telefono:</label>
+        <input type="tel" id="phone" name="phone" >
+        <label for="postal">Codigo Postal:</label>
+        <input type="number" name="postal" id="postal" >
         
-        <label for="carnet">Fecha Carnet de Conducir:</label><br>
-        <input type="date" name="carnet" id="carnet" ><br><br>
+        <label for="carnet">Fecha Carnet de Conducir:</label>
+        <input type="date" name="carnet" id="carnet" >
 
-        <label for="matricula">Matricula:</label><br>
-        <input type="text" name="matricula" id="matricula"><br><br>
-        <label for="matriculacion">Fecha de Matriculación:</label><br>
-        <input type="date" name="matriculacion" id="matriculacion" ><br><br>
-        <label for="nacimiento">Fecha de Nacimiento:</label><br>
-        <input type="date" name="nacimiento" id="nacimiento" ><br><br>
+        <label for="matricula">Matricula:</label>
+        <input type="text" name="matricula" id="matricula">
+        <label for="matriculacion">Fecha de Matriculación:</label>
+        <input type="date" name="matriculacion" id="matriculacion" >
+        <label for="nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" name="nacimiento" id="nacimiento" >
+      </div>
 
-        <label for="Sexo">Sexo:</label><br>
+      <div class="div3">
+        <label for="Sexo">Sexo:</label>
         <select name="Sexo" id="Sexo" >
             <option value="">--Seleccionar una opción--</option>
             <option value="Masculino">Hombre</option>
             <option value="Femenino">Mujer</option>
             <option value="Otro">Otro</option>
-        </select><br><br>
+        </select>
 
-        <label for="comunidades">Comunidades:</label><br>
+        <label for="comunidades">Comunidades:</label>
         <select name="comunidades" id="comunidades">
           <option value="-1">--Selecciona una Comunidad--</option>
-        </select><br><br>
+        </select>
 
-        <label for="provincias" id="provincias">Provincia:</label><br>
+        <label for="provincias" id="provincias">Provincia:</label>
         <select name="provincias" id="provincia">
-        </select><br><br>
+        </select>
           
-          <label for="Marca">Marca:</label><br>
+          <label for="Marca">Marca:</label>
           <select name="Marca" id="Marca" >
             <option value="-1">--Seleccionar una opción--</option>
-          </select><br><br>
+          </select>
 
           <label for="Modelo"></label>
           <select name="Modelo" id="Modelo">
-          </select><br><br>
+          </select>
 
-        <label for="Seguro">Tipo de Seguro</label><br>
+        <label for="Seguro">Tipo de Seguro</label>
         <select name="Seguro" id="Seguro" >
           <option value="">--Seleccionar una opción--</option>
             <option value="Terceros">Terceros</option>
             <option value="Terceros-2">Terceros Ampliado</option>
             <option value="Franquicia">Franquiciado</option>
             <option value="TodoRiesgo">Todo Riesgo</option>
-        </select><br><br>
+        </select>
 
-        <label for="Combustible">Tipo de Vehiculo:</label><br>
+        <label for="Combustible">Tipo de Vehiculo:</label>
         <select name="Combustible" id="Combustible" >
           <option value="">--Seleccionar una opción--</option>
             <option value="Diesel">Diesel</option>
             <option value="Gasolina">Gasolina</option>
             <option value="Hibrido">Hibrido</option>
             <option value="Electrico">Electrico</option>
-        </select><br><br>
+        </select>
+      </div>
+      <div class="div4">
+        <label for="Foto">Fotografia del DNI</label>
+        <input type="file" name="Foto" id="foto">
+      </div>
+      <div class="div5">
+        <input type="checkbox" name="terminos" id="terminos" >
+        <label for="terminos">Acepto los Terminos y condiciones</label>
+      
+        <br>
+        <button id="sub">Calcular</button>
+      </div>
+      </form>
 
 
-        <label for="Foto">Fotografia del DNI</label><br>
-        <input type="file" name="Foto" id="foto"><br><br>
-
-        <input type="checkbox" name="terminos" id="terminos" value="Acepto" >
-        <label for="terminos">Acepto los Terminos y condiciones</label><br><br>
-        
-
-        <button type="submit" id="sub">Calcular</button>
-    </form>
-
+    
 
 
     <script src="logica.js"></script>

@@ -133,13 +133,18 @@ const marcasYModelos = [
   ["Volvo", "XC40", "XC60", "XC90", "S60", "V60"],
 ];
 
+// Cargamos las marcas, los modelos, las comunidades y las provincias
 loadMarcas();
 loadModelos();
 loadComunidades();
 loadProvincias();
 
+
+// Variable para comprobar que todo sea correcto
 let comprobacion = false;
 
+
+// Funcion para hacer todas las comprobaciones al apretar el boton submit
 function validar() {
   if (
     validarNombre() &&
@@ -166,9 +171,11 @@ function validar() {
   return comprobacion;
 }
 
+// Funcion para validar el nombre
 function validarNombre() {
   nombre.value.trim();
 
+  // Si tiene alguno de las siguientes comprobaciones nos da error.
   if (
     nombre.value.match(/\d|\s/) ||
     nombre.value === "" ||
@@ -187,9 +194,10 @@ function validarNombre() {
   }
 }
 
+// funcion para validar apellidos
 function validarApellidos() {
   apll.value.trim();
-
+// Si tiene alguno de las siguientes comprobaciones nos da error.
   if (apll.value.match(/\d/) || apll.value === "" || apll.value.length > 30) {
     apll.setAttribute(
       "title",
@@ -204,7 +212,9 @@ function validarApellidos() {
   }
 }
 
+// funcion para validar el DNI
 function validarDNI() {
+  // Si no cumple con la expresión regular da error.
   if (!dni.value.match("^[0-9]{8}[A-z]$")) {
     dni.setAttribute(
       "title",
@@ -219,7 +229,9 @@ function validarDNI() {
   }
 }
 
+// funcion para validar el email
 function validarEmail() {
+  // Si no cumple con la expresión regular da error.
   if (
     !email.value.match(
       "[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
@@ -238,7 +250,9 @@ function validarEmail() {
   }
 }
 
+// funcion para validar el telefono
 function validarTelefono() {
+  // Si no cumple con la expresión regular da error.
   if (!telefono.value.match("[0-9]{9}") || telefono.value.length > 9) {
     telefono.setAttribute(
       "title",
@@ -254,7 +268,9 @@ function validarTelefono() {
   }
 }
 
+// funcion para validar codigo postal
 function validarPostal() {
+  // Si no cumple con la expresión regular da error.
   if (!codigoPostal.value.match("[0-9]{5}") || codigoPostal.value > 52999) {
     codigoPostal.setAttribute(
       "title",
@@ -269,8 +285,11 @@ function validarPostal() {
   }
 }
 
+
+// variable para almacenar la edad del cliente
 let edad;
 
+// funcion para validar la fecha de nacimiento
 function validarFechaNacimiento() {
   const fechaNacimiento = nacimiento.value;
   const fechaNacimientoDate = new Date(fechaNacimiento);
@@ -297,6 +316,7 @@ function validarFechaNacimiento() {
   }
 }
 
+// funcion para validar la matricula
 function validarMatricula() {
   if (
     !matricula.value.match("^[0-9]{1,4}[BCDFGHJKLMNPRSTVWXYZ]{3}") ||
@@ -312,8 +332,10 @@ function validarMatricula() {
   }
 }
 
+// variable para guardar los años del coche
 let añosCoche;
 
+// funcion para validar fecha de matriculación
 function validarFechaMatriculacion() {
   const fechaMatriculacion = matriculacion.value;
   const fechaMatriculacionDate = new Date(fechaMatriculacion);
@@ -340,8 +362,11 @@ function validarFechaMatriculacion() {
   }
 }
 
+
+// variable para almacenar los años del carnet
 let añosCarnet;
 
+//funcion para validar la fecha del carnet
 function validarFechaCarnet() {
   const fechaCarnet = carnet.value;
   const fechaCarnetDate = new Date(fechaCarnet);
@@ -368,6 +393,7 @@ function validarFechaCarnet() {
   }
 }
 
+// funcion para validar el sexo
 function validarSexo() {
   if (sexo.value == "") {
     sexo.setAttribute("title", "Error el campo de sexo no puede quedar vacío");
@@ -380,6 +406,7 @@ function validarSexo() {
   }
 }
 
+// funcion para validar la comunidad seleccionada
 function validarComundiades() {
   if (comunidades.value == "-1") {
     comunidades.setAttribute(
@@ -395,6 +422,8 @@ function validarComundiades() {
   }
 }
 
+
+// funcion para validar la provincia seleccionadoa
 function validarProvincia() {
   if (provincia.value == "-1") {
     provincia.setAttribute(
@@ -410,6 +439,7 @@ function validarProvincia() {
   }
 }
 
+// funcion para validar la marca seleccionada
 function validarMarca() {
   if (marcas.value == "-1") {
     marcas.setAttribute(
@@ -425,6 +455,8 @@ function validarMarca() {
   }
 }
 
+
+// funcion para validar el modelo seleccionado
 function validarModelo() {
   if (modelo.value == "-1") {
     modelo.setAttribute(
@@ -440,6 +472,7 @@ function validarModelo() {
   }
 }
 
+// funcion para validar el seguro seleccionado
 function validarSeguro() {
   if (seguro.value == "") {
     seguro.setAttribute(
@@ -455,6 +488,7 @@ function validarSeguro() {
   }
 }
 
+// funcion para validar el tipo de combustible seleccionado
 function validarVehiculo() {
   if (vehiculo.value == "") {
     vehiculo.setAttribute(
@@ -470,6 +504,7 @@ function validarVehiculo() {
   }
 }
 
+// funcion para validar si el fichero acaba en jpg
 function validarFichero() {
   if (!fichero.value.match(/\.(jpg)$/)) {
     fichero.setAttribute("title", "Error la extensión del archivo no es jpg");
@@ -482,7 +517,10 @@ function validarFichero() {
   }
 }
 
+// variable para crear un elemento error
 let error = document.createElement("p");
+
+// function para validar si estan los terminos y condiciones
 function validarTerminos() {
   if (!terminos.checked) {
     error.style.background = "rgba(255, 0, 0, 0.56)";
@@ -499,6 +537,8 @@ function validarTerminos() {
   }
 }
 
+
+// funcion para cargar comunidades
 function loadComunidades() {
   for (let i = 0; i < comunidadesYProvincias.length; i++) {
     const option = document.createElement("option");
@@ -508,6 +548,7 @@ function loadComunidades() {
   }
 }
 
+// funcion para cargar provincias
 function loadProvincias() {
   provincia.innerHTML = "";
   let valCom;
@@ -529,6 +570,7 @@ function loadProvincias() {
   }
 }
 
+// funcion para cargar marcas
 function loadMarcas() {
   for (let i = 0; i < marcasYModelos.length; i++) {
     const option = document.createElement("option");
@@ -538,6 +580,7 @@ function loadMarcas() {
   }
 }
 
+// funcion para cargar modelos
 function loadModelos() {
   modelo.innerHTML = "";
   document.getElementById("ModeloID").style.display = "none";
@@ -560,19 +603,23 @@ function loadModelos() {
 
 // 500, 650, 750, 1000
 
+// variables de precio base
 const baseTerceros = 500;
 const baseTercerosAmpliados = 650;
 const baseFranquicia = 750;
 const baseTodoRiesgo = 1000;
 
+// tipos de seguros que existen
 let tiposSeguro = [
   "Terceros",
   "Terceros Ampliado",
   "Franquiciado",
   "Todo Riesgo",
 ];
+// variable para los precios
 let precios;
 
+// funcion para calcular el precio del seguro cuando el boton submit es apretado
 function calcularSeguro(event) {
   event.preventDefault();
 
@@ -633,11 +680,16 @@ function calcularSeguro(event) {
   }
 }
 
+
+// variable para crear las cartas
 const cartas = document.getElementById("cards");
+// variable para el indice de las cartas
 let indice = 0;
 
+// array que almacena los valores del select de seguros
 let segValue = ["Terceros", "Terceros-2", "Franquicia", "TodoRiesgo"];
 
+// funcion para cargar las tarjetas
 function loadSeguros() {
   if (indice < 4) {
     for (let i = indice; i < 4; i++) {
@@ -682,6 +734,7 @@ function loadSeguros() {
   }
 }
 
+// funcion para borrar las tarjetas.
 function borraCarta(event) {
   if (event.target.tagName == "BUTTON") {
     let buttonId = event.target.id;
